@@ -3,6 +3,12 @@ body {
     background-color: lightgrey;
     margin-top: 75px;
 }
+h2{
+    font-family: monotype-corsiva;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
 
 .center {
     text-align: center;

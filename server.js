@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleThree={
+var articleOne={
     title: 'article-one|ar siddiqui',
     heading: 'Article One',
     date: 'sep 5 2016',
@@ -60,7 +60,7 @@ return htmlTemplate;
 
 
 app.get('/article1', function(req,res) {
-     res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+     res.send(createTemplate(articleOne));
     
 });
 
@@ -74,7 +74,7 @@ app.get('/article2', function(req,res) {
     
 });
 app.get('/article3', function(req,res) {
-    res.send(createTemplate(articleThree))
+    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
     
 });
 app.get('/ui/style.css', function (req, res) {

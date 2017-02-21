@@ -5,7 +5,8 @@ element.innerHTML="this is a client side javascript example so go through it"
 
 var image=document.getElementById('madi');
 
-var marginLeft=0;
+var marginLeft;
+marginLeft=0;
 function moveRight(){
     marginleft=marginleft + 1;
     image.style.marginLeft=marginLeft + 'px';

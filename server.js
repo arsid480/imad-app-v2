@@ -9,6 +9,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/',function (req,res){
+    res.sendFile(path.join(_dirname,'ui','article-one.html'));
+});
 var articleOne={
     title: 'article-one|ar siddiqui',
     heading: 'Article One',

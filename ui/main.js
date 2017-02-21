@@ -4,7 +4,13 @@ var element =document.getElementById('main_heading');
 element.innerHTML="this is a client side javascript example so go through it"
 
 var image=document.getElementById('madi');
+
+var marginLeft=0;
+function moveRight(){
+    marginleft=marginleft+10;
+    madi.style.marginLeft=marginLeft+'px';
+}
 madi.onclick=function(){
-   madi.style.marginLeft='200px';
+ var interval=setInterval(moveRight,1000);
 };
 

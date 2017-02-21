@@ -1,5 +1,5 @@
 console.log('Loaded!');
-alert("hello i m the javascript");
+
 var element =document.getElementById('main_heading');
 element.innerHTML="this is a client side javascript example so go through it"
 
@@ -11,6 +11,7 @@ function moveRight(){
     image.style.marginLeft=marginLeft + 'px';
 }
 image.onclick=function(){
+    alert("dont click on me")
  var interval=setInterval(moveRight,50);
 };
 

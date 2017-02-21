@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 var element =document.getElementById('main_heading');
-element.innerHTML="this is a client side javascript example so go through it"
+
 
 var image=document.getElementById('madi');
 

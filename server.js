@@ -5,6 +5,13 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var counter=0;
+app.get('/counter', function (req, res){
+   counter=counter+1;
+   res.send(counter.toString());
+});
+
+
 var articles={
     'article-one': {
         title: 'Article-one',
@@ -16,7 +23,7 @@ var articles={
                     <p>
                         this is the content of my first article.this is the content of my first article.this is the content of my first article.
                     </p>`
-},
+    },
     'article-two': {
         title: 'Article-two',
         heading: 'Article two',
@@ -89,11 +96,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-var counter=0;
-app.get('/counter', function (req, res){
-   counter=counter+1;
-   res.send(counter.toString());
-});
+
 
 
 

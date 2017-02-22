@@ -52,16 +52,6 @@ submit.onclick=function(){
   //make the request
   request.open('GET','http://arsid480.imad.hasura-app.io/submit-name?name='+ name,true);
   request.send(null);
-    //make the request to the server and send the name
-    
-    //capture the list of name and render as a list
-    var names=['name1','name2','name3','name4'];
-    var list='';
-    for(var i=0;i<names.length;i++){
-        list+='<li>'+names[i]+'</li>';
-    }
-    var ul=document.getElementById('namelist');
-    ul.innerHTML=list;
     
     
 };

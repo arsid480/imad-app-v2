@@ -14,7 +14,7 @@ button.onclick=function(){
                 
             }
         }
-        //not yet done
+        //Not yet done
     };
     
   //make the request

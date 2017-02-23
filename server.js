@@ -13,6 +13,19 @@ var config={
     port: '5432',
     password: process.env.DB_PASSWORD
 }
+//databse code
+var pool=new Pool(config);
+app.get('/test-db',function(req, res){
+   //make a request
+   //return the response to it
+   pool.query('SELECT * FROM test',function(err, result){
+       if(err){
+           res.status(500).send(err.toString());
+       }else{
+           res.send(JSON.stringify(result.rows));
+       }
+  });
+});
 
 
 
@@ -115,19 +128,7 @@ app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-//databse code
-var pool=new Pool(config);
-app.get('/test-db',function(req, res){
-   //make a request
-   //return the response to it
-   pool.query('SELECT * FROM test',function(err, result){
-       if(err){
-           res.status(500).send(err.toString());
-       }else{
-           res.send(JSON.stringify(result.rows));
-       }
-  });
-});
+
 
 
 

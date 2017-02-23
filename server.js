@@ -1,6 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var app = express();
+app.use(morgan('combined'));
+
 var Pool=require('pg').Pool;
 
 var config={
@@ -11,21 +14,8 @@ var config={
     password: process.env.DB_PASSWORD
 }
 
-var app = express();
-app.use(morgan('combined'));
 
-var pool=new Pool(config);
-app.get('/test-db',function(req, res){
-   //make a request
-   //return the response to it
-   pool.query('SELECT * FROM test',function(err, result){
-       if(err){
-           res.status(500).send(err.toString());
-       }else{
-           res.send(JSON.stringify(result.rows));
-       }
-  });
-});
+
 
 var counter=0;
 app.get('/counter', function (req, res){
@@ -124,6 +114,19 @@ app.get('/:articleName', function (req, res) {
     //articles[articleName]={} content object for object one
     var articleName=req.params.articleName;
   res.send(createTemplate(articles[articleName]));
+});
+//databse code
+var pool=new Pool(config);
+app.get('/test-db',function(req, res){
+   //make a request
+   //return the response to it
+   pool.query('SELECT * FROM test',function(err, result){
+       if(err){
+           res.status(500).send(err.toString());
+       }else{
+           res.send(JSON.stringify(result.rows));
+       }
+  });
 });
 
 

@@ -50,7 +50,7 @@ submit.onclick=function(){
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
   //make the request
-  request.open('POST','http://arsid480.imad.hasura-app.io/submit-name?name='+ name,true);
+  request.open('GET','http://arsid480.imad.hasura-app.io/submit-name?name='+ name,true);
   request.send(null);
     
     

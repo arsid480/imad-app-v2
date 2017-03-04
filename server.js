@@ -2,13 +2,14 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto=require('crypto');
+var bodyParser=require('body-parser');
 
 
 
 var Pool=require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
-
+app.use(bodyParser.json());//it will intract the bodyparser whenever any request which is content type json
 var config={
     user: 'arsid480',
     database: 'arsid480',
@@ -42,6 +43,23 @@ app.get('/hash/:input',function(req,res){
    res.send(hashedString);
 });
 
+
+app.post('/creat-user',function(req,res){
+   //username password
+   var username=req.body.username;
+   var password=req.body.password;
+   var salt=getRandomBytes(128).toString();
+   var dbString=hash(password,salt);
+   pool.query('INSERT INTO "user" (username,password) VALUES($1.$2)',[username,dbString],function (err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }else{
+           res.send("user succesfully created :"+username);
+       }
+       
+   })
+    
+});
 var counter=0;
 app.get('/counter', function (req, res){
    counter=counter+1;

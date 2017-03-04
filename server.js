@@ -58,7 +58,7 @@ app.post('/create-user',function(req,res){
            res.send("user succesfully created :"+username);
        }
        
-   })
+   });
     
 });
 var counter=0;

@@ -74,7 +74,7 @@ submit.onclick=function(){
     
     
     var nameInput=document.getElementById('name');
-    var name=nameInput.value;
+    
     var username=document.getElementById('username'),value;
     var password=document.getElementById('password').value;
     console.log(username);
@@ -82,7 +82,7 @@ submit.onclick=function(){
   //make the request
   request.open('POST','http://arsid480.imad.hasura-app.io/login',true);
   request.setRequestHeader('Content-Type','application/json');
-  request.send(JSON.Stringify({username:username, password: password}));
+  request.send(JSON.stringify({username: username, password: password}));
     
     
 };

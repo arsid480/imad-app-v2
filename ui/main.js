@@ -23,7 +23,7 @@ button.onclick=function(){
    
 };
 
-var submit=document.getElementById('submit_btn');
+/*var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();
@@ -46,9 +46,9 @@ submit.onclick=function(){
             }
         }
         //Not yet done
-    };
+    };*/
     
-  var submit=document.getElementById('submit_button');
+  var submit=document.getElementById('submit');
 submit.onclick=function(){
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();

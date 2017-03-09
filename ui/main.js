@@ -47,6 +47,10 @@ submit.onclick=function(){
         }
         //Not yet done
     };*/
+    var simple=document.getElementById('simple_button');
+    simple.onclick=function(){
+        alert('hutiyapa');
+    }
     
   var submit=document.getElementById('poiu_butn');
 submit.onclick=function() {

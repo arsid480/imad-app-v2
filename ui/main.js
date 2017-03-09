@@ -48,9 +48,8 @@ submit.onclick=function(){
         //Not yet done
     };*/
     
-  /*var submit=document.getElementById('submit');
-submit.onclick*/
-function funcky() {
+  var submit=document.getElementById('poiu_butn');
+submit.onclick=function() {
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();
      

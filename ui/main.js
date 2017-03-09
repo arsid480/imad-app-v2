@@ -70,7 +70,7 @@ submit.onclick=function() {
             }
         }
     }
-}
+
     
     
     var nameInput=document.getElementById('name');

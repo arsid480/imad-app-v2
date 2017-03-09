@@ -1,4 +1,4 @@
-var button=document.getElementById('counter');
+/*var button=document.getElementById('counter');
 button.onclick=function(){
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();
@@ -23,7 +23,7 @@ button.onclick=function(){
    
 };
 
-/*var submit=document.getElementById('submit_btn');
+var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();

@@ -10,6 +10,8 @@ var Pool=require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());//it will intract the bodyparser whenever any request which is content type json
+
+
 var config={
     user: 'arsid480',
     database: 'arsid480',
@@ -46,6 +48,7 @@ app.get('/hash/:input',function(req,res){
 
 app.post('/create-user',function(req,res){
    //username password
+   //JSon reqiest we have to tell our express framework to find for these keys in the requet body
     var username = req.body.username;
    var password = req.body.password;
    var salt = crypto.randomBytes(128).toString('hex');

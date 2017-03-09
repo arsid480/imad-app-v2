@@ -49,8 +49,8 @@ submit.onclick=function(){
     };*/
     
     
-  var submit=document.getElementById('button_submit');
-submit.onclick=function() {
+  var sbmt_btn=document.getElementById('button_submit');
+    sbmt_btn.onclick=function() {
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();
      

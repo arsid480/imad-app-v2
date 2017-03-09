@@ -47,12 +47,9 @@ submit.onclick=function(){
         }
         //Not yet done
     };*/
-    var simple=document.getElementById('simple_button');
-    simple.onclick=function(){
-        alert('hutiyapa');
-    }
     
-  var submit=document.getElementById('poiu_butn');
+    
+  var submit=document.getElementById('simple_button');
 submit.onclick=function() {
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();

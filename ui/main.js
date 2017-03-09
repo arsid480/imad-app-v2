@@ -49,7 +49,7 @@ submit.onclick=function(){
     };*/
     
     
-  var submit=document.getElementById('simple_button');
+  var submit=document.getElementById('');
 submit.onclick=function() {
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();

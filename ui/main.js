@@ -48,8 +48,9 @@ submit.onclick=function(){
         //Not yet done
     };*/
     
-  var submit=document.getElementById('submit');
-submit.onclick=function(){
+  /*var submit=document.getElementById('submit');
+submit.onclick*/
+function funcky() {
     //Make a request to the counter endpoint
      var request=new XMLHttpRequest();
      
